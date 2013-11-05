@@ -59,9 +59,15 @@ public class RealignmentBAM {
 				int mateRefId = info.getSequenceIndex(tokens[1]);
 				if (mateRefId < 0) {
 					mismatchRef++;
+<<<<<<< HEAD
 //					System.err.println("Read: " + tokens[0]);
 //					System.err.println("\tAnchor reference sequence " + tokens[1] + " does not exist in realignment BAM file.");
 //					System.err.println("\tSkipped");
+=======
+				//	System.err.println("Read: " + tokens[0]);
+				//	System.err.println("\tAnchor reference sequence " + tokens[1] + " does not exist in realignment BAM file.");
+				//	System.err.println("\tSkipped");
+>>>>>>> upstream/master
 					continue;
 				}
 				
@@ -94,7 +100,11 @@ public class RealignmentBAM {
 			p2.end(" alignments written");
 			sam.close();
 			bam.close();
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> upstream/master
 			if (mismatchRef > 0) {
 				System.err.println("WARNING: " + mismatchRef + " alignments with no matching reference chromosome name");
 				System.err.println("in realignment BAM's sequence dictionary. Please ensure the same alignment indexes");
